@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
-import Typewriter from 'typewriter-effect';
+import Typed from 'react-typed';
 
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
+import { HeroModelCanvas } from './canvas';
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
+      <div className={`${styles.paddingX} absolute inset-0 top-[190px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
 
         {/* lefthand side line decorator */}
         <div className="flex flex-col justify-center items-center mt-5 z-10">
@@ -19,21 +19,20 @@ const Hero = () => {
         <div className='z-10'>
           <h1 className={`${styles.heroHeadText} text-secondary`}>Hi, I'm <span className='text-blue-out'>Jerry</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-secondary`}>
-            I'm a self-taught 
-            software engineer.<br className='sm:block hidden' /> With experience in developing
-            <Typewriter
-              options={{
-                strings: ['Web.', 'MR.', 'ROS.'],
-                autoStart: true,
-                loop: true,
-              }}
+            I'm a self-taught software engineer<br className='sm:block hidden' /> with experience in developing&nbsp;
+            <Typed 
+              className='text-blue-800'
+              strings={['Web.', 'MR.', 'ROS.']}
+              typeSpeed={180}
+              backSpeed={110}
+              loop
             />
           </p>
         </div>
 
       </div>
 
-      <ComputersCanvas className='z-0'/>
+      <HeroModelCanvas className='z-0'/>
 
       {/* scrolling button */}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">

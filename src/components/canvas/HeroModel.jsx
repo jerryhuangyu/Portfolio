@@ -4,8 +4,8 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
 import CanvasLoader from '../Loader'
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./car/scene.gltf')
+const HeroModel = ({ isMobile }) => {
+  const model = useGLTF('./car/scene.gltf')
 
   return (
     <mesh>
@@ -20,7 +20,7 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
       <primitive 
-        object={computer.scene}
+        object={model.scene}
         scale={isMobile ? 0.38 : 0.75}
         position={isMobile ? [0, -1.8, -0.45] : [0, -2.55, -1.5]}
         rotation={[-0.01, -3.05, -0.1]}
@@ -29,7 +29,7 @@ const Computers = ({ isMobile }) => {
   )
 }
 
-const ComputersCanvas = () => {
+const HeroModelCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <HeroModel isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
@@ -69,4 +69,4 @@ const ComputersCanvas = () => {
   )
 }
 
-export default ComputersCanvas
+export default HeroModelCanvas
