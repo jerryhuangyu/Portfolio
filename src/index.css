@@ -23,9 +23,9 @@
   background: linear-gradient(
     to right,
     aquamarine,
-    mediumpurple
+    rgb(140, 104, 213)
   );
-  filter: blur(205px);
+  filter: blur(370px);
   border-radius: 49% 51% 70% 30% / 67% 68% 32% 33% ;
 }
 

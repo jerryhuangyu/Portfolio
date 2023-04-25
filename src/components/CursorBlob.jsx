@@ -14,7 +14,7 @@ const CursorBlob = () => {
           left: `${pageX}px`,
           top: `${pageY}px`,
         }, { 
-          duration: 6000,
+          duration: 7000,
           fill: 'forwards'
         }
       );
