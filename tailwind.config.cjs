@@ -27,7 +27,8 @@ module.exports = {
         "blue-800": '#576076',
         "blue-900": '#485060',
         "blue-out": '#62CDFF',
-        "blue-header": '#19A7CE',
+        "blue-header": '#51c2d5',
+        // "blue-header": '#19A7CE',
       },
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
