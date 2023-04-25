@@ -65,7 +65,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className='flex-[0.75] bg-tertiary p-8 rounded-2xl'
+        className='flex-[0.75] bg-blue-200 rounded-2xl p-[60px]'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -78,23 +78,25 @@ const Contact = () => {
           <label className='flex flex-col'>
             <span className='text-secondary font-medium mb-4'>Your Name</span>
             <input
+              required
               type="text"
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className='bg-blue-200 py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium'
+              className='bg-primary py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
             <span className='text-secondary font-medium mb-4'>Your Email</span>
             <input
+              required
               type="email"
               name='email'
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className='bg-blue-200 py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium'
+              className='bg-primary py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -105,16 +107,18 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What's do you want to say?"
-              className='bg-blue-200 py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium'
+              className='bg-primary py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium'
             />
           </label>
 
-          <button
-            type='submit'
-            className='bg-blue-out py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-secondary rounded-xl'
-          >
-            {loading ? 'Sending...' : 'Send'}
-          </button>
+          <div className='flex justify-end'>
+            <button
+              type='submit'
+              className='bg-blue-out py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-secondary rounded-xl'
+            >
+              {loading ? 'Sending...' : 'Send'}
+            </button>
+          </div>
         </form>
       </motion.div>
 
