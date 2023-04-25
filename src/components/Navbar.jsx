@@ -51,18 +51,20 @@ const Navbar = () => {
             onClick={() => setToggle(!toggle)}
           />
 
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 light-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-md`}>
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+          <div className={`${!toggle ? 'right-[-100%]' : 'right-0'} duration-300 ease-in-out bg-blue-100 px-16 py-6 fixed top-[76px] h-screen min-w-[70%]`}>
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-6">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? "text-blue-700 underline" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px]`}
+                  className={`${active === link.title ? "text-blue-700 underline" : "text-secondary"} font-poppins flex font-medium cursor-pointer text-[22px] w-full`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a href={`#${link.id}`} className='w-full'>
+                    {link.title}
+                  </a>
                 </li>
               ))}
             </ul>

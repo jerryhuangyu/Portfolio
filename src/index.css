@@ -28,8 +28,8 @@
   background: rgb(232,223,202);
   background: linear-gradient(
     90deg, 
-    rgba(232,223,202,1) 0%,
-    rgba(237,227,211,1) 35%,
+    rgb(226, 219, 202) 0%,
+    rgb(230, 223, 212) 35%,
     rgba(247,243,238,1) 100%
   );
 }
