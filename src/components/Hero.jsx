@@ -3,6 +3,7 @@ import Typed from 'react-typed';
 
 import { styles } from '../styles';
 import { HeroModelCanvas } from './canvas';
+import { HackerText } from './';
 
 const Hero = () => {
   return (
@@ -17,7 +18,7 @@ const Hero = () => {
 
         {/* introduction */}
         <div className='z-10'>
-          <h1 className={`${styles.heroHeadText} text-secondary`}>Hi, I'm <span className='text-blue-out'>Jerry</span></h1>
+          <HackerText />
           <p className={`${styles.heroSubText} mt-4 text-secondary`}>
             I'm a self-taught software engineer<br className='sm:block hidden' /> with experience in developing&nbsp;
             <Typed 

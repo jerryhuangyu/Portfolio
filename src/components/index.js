@@ -8,6 +8,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import CursorBlob from './CursorBlob';
+import HackerText from './HackerText';
 
 export {
   Hero,
@@ -23,4 +24,5 @@ export {
   HeroModelCanvas, 
   StarsCanvas,
   CursorBlob,
+  HackerText,
 }
