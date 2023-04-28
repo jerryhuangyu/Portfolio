@@ -30,7 +30,12 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import lightmode from './lightmode.png';
+import darkmode from './darkmode.png';
+
 export {
+  darkmode,
+  lightmode,
   logo,
   backend,
   creator,
