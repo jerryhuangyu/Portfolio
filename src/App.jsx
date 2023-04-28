@@ -35,7 +35,7 @@ const App = () => {
         <About setSelectedPage={setSelectedPage} />
         <Experience />
         <Tech />
-        <Works />
+        <Works setSelectedPage={setSelectedPage} />
         <Feedbacks />
         <div className="relative z-0">
           <Contact />
