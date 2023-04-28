@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary overflow-hidden">
+      <div className="relative z-0 bg-primary dark:bg-dark-primary overflow-hidden">
         <div className="hidden md:block">
           <CursorBlob />
         </div>

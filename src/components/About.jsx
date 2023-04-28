@@ -54,7 +54,7 @@ const About = ({ setSelectedPage }) => {
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary dark:text-dark-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cupiditate, dolorum, molestiae hic in, harum nihil deleniti asperiores aliquam minima cumque illum corporis nam maiores quo illo consequatur quasi pariatur provident totam repellat aliquid nisi sed cum. Atque quidem quo, temporibus eum suscipit quis molestias autem. Quod eius deserunt quis!
       </motion.p>
