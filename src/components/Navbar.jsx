@@ -8,7 +8,7 @@ import { logo, menu, close, darkmode, lightmode } from '../assets';
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIsLightMode }) => {
   const [toggle, setToggle] = useState(false);
 
-  const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0' : 'bg-opacity-60 bg-primary backdrop-blur-md';
+  const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0 dark:backdrop-blur-lg' : 'bg-opacity-60 dark:bg-opacity-0 bg-primary backdrop-blur-md';
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${narbarBgOpacity}`}>
       <div className="w-full flex justify-between items-center max-w-7x1 mx-auto 2xl:px-[120px]">
@@ -21,7 +21,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIs
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className='text-blue-700 text-[18px] font-bold cursor-pointer flex px-2 font-["Noto_Sans_TC"]'>
+          <p className='text-blue-700 dark:text-blue-300 text-[18px] font-bold cursor-pointer flex px-2 font-["Noto_Sans_TC"]'>
             黃柏瑜 &nbsp;
             <span className='sm:block hidden'>| Jerry's Protfolio</span>
           </p>
@@ -34,7 +34,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIs
               key={link.id}
               className={`${
                 selectedPage === link.title ? "underline" : ""
-              } hover:text-blue-out text-secondary text-[18px] font-medium cursor-pointer`}
+              } hover:text-blue-out text-secondary dark:text-blue-300 text-[18px] font-medium cursor-pointer`}
               onClick={() => {
                 setSelectedPage(link.title)
               }}

@@ -24,7 +24,7 @@ const CursorBlob = () => {
   return (
     <div 
       id='cursor_blob'
-      className="absolute blob-bg-gradient w-[700px] aspect-square translate-x-[-50%] translate-y-[-50%] rounded-full"
+      className="absolute blob-bg-gradient w-[400px] aspect-square translate-x-[-50%] translate-y-[-50%] rounded-full"
     >
       
     </div>

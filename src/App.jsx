@@ -28,10 +28,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary dark:bg-dark-primary overflow-hidden">
-        <div className="hidden md:block">
+        <div className="hidden dark:md:block">
           <CursorBlob />
         </div>
-        <div className="hero-bg-gradient bg-cover bg-no-repeat bg-center">
+        <div className="bg-[#dbe7f0] dark:bg-dark-primary dark:bg-none bg-gradient-to-tr from-[#dbe7f0] via-[#f0e8d4] to-[#f5efe6] bg-cover bg-no-repeat bg-center">
           <Navbar
             isTopOfPage={isTopOfPage}
             selectedPage={selectedPage}
@@ -42,7 +42,7 @@ const App = () => {
           <Hero />
         </div>
         <About setSelectedPage={setSelectedPage} />
-        <Experience />
+        <Experience isLightMode={isLightMode} />
         <Tech />
         <Works setSelectedPage={setSelectedPage} />
         <Feedbacks />

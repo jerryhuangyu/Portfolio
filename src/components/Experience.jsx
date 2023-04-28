@@ -8,11 +8,15 @@ import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, isLightMode }) => {
+  const bgCard = isLightMode?"#1d1836":"rgba(0, 0, 0, 0.2)";
+  const timelineColor = isLightMode?"#fff":"#AEBDCA";
+  const timelineBorderRight = isLightMode?"#232631":"#AEBDCA";
+
   return(
     <VerticalTimelineElement 
-      contentStyle={{ background: '#1d1836', color: '#fff'}}
-      contentArrowStyle={{ borderRight: '7px solid #232631'}}
+      contentStyle={{ background: bgCard, color: timelineColor}}
+      contentArrowStyle={{ borderRight: `7px solid ${timelineBorderRight}`}}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -37,7 +41,7 @@ const ExperienceCard = ({ experience }) => {
   )
 }
 
-const Experience = () => {
+const Experience = ({ isLightMode }) => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -46,9 +50,9 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline lineColor='#AEBDCA'>
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <ExperienceCard key={index} experience={experience} isLightMode={isLightMode} />
           ))}
         </VerticalTimeline>
       </div>

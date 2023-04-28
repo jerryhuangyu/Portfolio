@@ -19,10 +19,10 @@ const Hero = () => {
         {/* introduction */}
         <div className='z-10'>
           <HackerText />
-          <p className={`${styles.heroSubText} mt-4 text-secondary`}>
+          <p className={`${styles.heroSubText} mt-4`}>
             I'm a self-taught software engineer<br className='sm:block hidden' /> with experience in developing&nbsp;
             <Typed 
-              className='text-blue-800 font-bold'
+              className='text-blue-800 dark:text-primary font-bold'
               strings={['Web.', 'MR.', 'ROS.']}
               typeSpeed={180}
               backSpeed={110}

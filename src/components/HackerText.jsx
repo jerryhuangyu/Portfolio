@@ -41,7 +41,7 @@ const HackerText = () => {
   }, [handleMouseOver]);
 
   return (
-    <h1 className={`${styles.heroHeadText} text-secondary`}>
+    <h1 className={`${styles.heroHeadText} text-secondary dark:text-white`}>
       Hi, I'm <span ref={hackerTextRef} data-value='Jerry' className='text-blue-out'>Jerry</span>
     </h1>
   )
