@@ -22,7 +22,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary overflow-hidden">
-        <CursorBlob className='hidden md:block' />
+        <div className="hidden md:block">
+          <CursorBlob />
+        </div>
         <div className="hero-bg-gradient bg-cover bg-no-repeat bg-center">
           <Navbar isTopOfPage={isTopOfPage} />
           <Hero />
