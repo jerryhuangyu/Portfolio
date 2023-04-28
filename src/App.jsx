@@ -38,7 +38,7 @@ const App = () => {
         <Works setSelectedPage={setSelectedPage} />
         <Feedbacks />
         <div className="relative z-0">
-          <Contact />
+          <Contact setSelectedPage={setSelectedPage} />
           <StarsCanvas />
         </div>
       </div>

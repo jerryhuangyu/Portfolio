@@ -6,8 +6,10 @@ import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import { staggerContainer } from '../utils/motion';
+import { Pages } from '../constants';
 
-const Contact = () => {
+const Contact = ({ setSelectedPage }) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
@@ -60,6 +62,18 @@ const Contact = () => {
   }
 
   return (
+  <motion.section
+    onViewportEnter={() => setSelectedPage(Pages.Contact)}
+    variants={staggerContainer()}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.25}}
+    className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+  >
+    <span className='hash-span' id='contact'>
+        &nbsp;
+    </span>
+
     <div
       className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'
     >
@@ -129,7 +143,8 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
     </div>
+  </motion.section>
   )
 }
 
-export default SectionWrapper(Contact, "contact")
+export default Contact
