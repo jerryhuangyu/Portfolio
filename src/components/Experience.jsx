@@ -5,8 +5,8 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import { styles } from '../styles';
 import { experiences } from '../constants';
-import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
+import { staggerContainer } from '../utils/motion';
 
 const ExperienceCard = ({ experience, isLightMode }) => {
   const bgCard = isLightMode?"#1d1836":"rgba(0, 0, 0, 0.2)";
@@ -41,23 +41,36 @@ const ExperienceCard = ({ experience, isLightMode }) => {
   )
 }
 
-const Experience = ({ isLightMode }) => {
+const Experience = ({isLightMode}) => {
+  const timelineColor = isLightMode?"#fff":"#AEBDCA";
+
   return (
-    <>
+    <motion.section
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25}}
+      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+    >
+      <span className='hash-span' id='experience'>
+          &nbsp;
+      </span>
+
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far</p>
         <h2 className={ styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline lineColor='#AEBDCA'>
+        <VerticalTimeline lineColor={timelineColor} >
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} isLightMode={isLightMode} />
           ))}
         </VerticalTimeline>
       </div>
-    </>
+
+    </motion.section>
   )
 }
 
-export default SectionWrapper(Experience, "experience")
+export default Experience;
