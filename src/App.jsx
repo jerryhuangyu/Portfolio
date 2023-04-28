@@ -7,6 +7,7 @@ import { Pages } from "./constants";
 
 const App = () => {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+  const [isLightMode, setIsLightMode] = useState(true);
   const [selectedPage, setSelectedPage] = useState(Pages.Hero);
   const handleScroll = () => {
     if (window.scrollY === 0) {
@@ -29,7 +30,13 @@ const App = () => {
           <CursorBlob />
         </div>
         <div className="hero-bg-gradient bg-cover bg-no-repeat bg-center">
-          <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+          <Navbar
+            isTopOfPage={isTopOfPage}
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+            isLightMode={isLightMode}
+            setIsLightMode={setIsLightMode}
+          />
           <Hero />
         </div>
         <About setSelectedPage={setSelectedPage} />

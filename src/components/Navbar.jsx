@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
 import { navLinks, Pages } from '../constants';
-import { logo, menu, close } from '../assets';
+import { logo, menu, close, darkmode, lightmode } from '../assets';
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIsLightMode }) => {
   const [toggle, setToggle] = useState(false);
 
   const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0' : 'bg-opacity-60 bg-primary backdrop-blur-md';
@@ -28,7 +28,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         </Link>
 
         {/* menu for screen above sm */}
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-10 items-center">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -42,6 +42,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+            <img
+              className='w-5 h-5 cursor-pointer rounded-full'
+              src={isLightMode?lightmode:darkmode}
+              alt="mode"
+              onClick={() => {
+                setIsLightMode(!isLightMode)
+              }}
+            />
         </ul>
 
         {/* menu for sm screen */}
