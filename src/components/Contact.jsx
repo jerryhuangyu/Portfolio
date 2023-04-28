@@ -87,7 +87,7 @@ const Contact = ({ setSelectedPage }) => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-6 flex flex-col gap-4'
         >
           <label className='flex flex-col'>
             <span className='text-secondary font-medium mb-4'>Your Name</span>
@@ -116,7 +116,7 @@ const Contact = ({ setSelectedPage }) => {
           <label className='flex flex-col'>
             <span className='text-secondary font-medium mb-4'>Your Message</span>
             <textarea
-              rows="7"
+              rows="5"
               name='message'
               value={form.message}
               onChange={handleChange}
