@@ -6,8 +6,10 @@ import { Curve } from "three";
 import { Pages } from "./constants";
 
 const App = () => {
+  const [isLightMode, setIsLightMode] = useState(
+    document.documentElement.classList.contains("dark")?false:true
+  );
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const [isLightMode, setIsLightMode] = useState(true);
   const [selectedPage, setSelectedPage] = useState(Pages.Hero);
   const handleScroll = () => {
     if (window.scrollY === 0) {

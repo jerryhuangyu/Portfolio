@@ -43,12 +43,21 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIs
             </li>
           ))}
             <img
-              className='w-5 h-5 cursor-pointer rounded-full'
-              src={isLightMode?lightmode:darkmode}
+              className='w-5 h-5 cursor-pointer rounded-full dark:bg-blue-out'
               alt="mode"
               onClick={() => {
-                setIsLightMode(!isLightMode)
+                setIsLightMode(!isLightMode);
+                if (isLightMode) {
+                  // console.log("set to dark");
+                  localStorage.theme = 'dark';
+                  document.documentElement.classList.add("dark");
+                } else {
+                  // console.log("set to light");
+                  localStorage.theme = 'light';
+                  document.documentElement.classList.remove("dark");
+                }
               }}
+              src={isLightMode?lightmode:darkmode}
             />
         </ul>
 
