@@ -3,12 +3,15 @@ import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, CursorBlob } from './components';
 import { useRef, useEffect, useState } from "react";
 import { Curve } from "three";
+import { Pages } from "./constants";
 
 const App = () => {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+  const [selectedPage, setSelectedPage] = useState(Pages.Hero);
   const handleScroll = () => {
     if (window.scrollY === 0) {
       setIsTopOfPage(true);
+      setSelectedPage(Pages.Hero);
     } else {
       setIsTopOfPage(false);
     }
@@ -26,10 +29,10 @@ const App = () => {
           <CursorBlob />
         </div>
         <div className="hero-bg-gradient bg-cover bg-no-repeat bg-center">
-          <Navbar isTopOfPage={isTopOfPage} />
+          <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
           <Hero />
         </div>
-        <About />
+        <About setSelectedPage={setSelectedPage} />
         <Experience />
         <Tech />
         <Works />

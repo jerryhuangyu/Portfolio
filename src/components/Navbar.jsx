@@ -2,15 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
-import { navLinks } from '../constants';
+import { navLinks, Pages } from '../constants';
 import { logo, menu, close } from '../assets';
 
-const Navbar = ({ isTopOfPage }) => {
-  const [active, setActive] = useState('');
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [toggle, setToggle] = useState(false);
 
   const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0' : 'bg-opacity-60 bg-primary backdrop-blur-md';
-
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${narbarBgOpacity}`}>
       <div className="w-full flex justify-between items-center max-w-7x1 mx-auto 2xl:px-[120px]">
@@ -18,7 +16,7 @@ const Navbar = ({ isTopOfPage }) => {
           to='/'
           className='flex items-center gap-2'
           onClick={() => {
-            setActive("");
+            setSelectedPage(Pages.Hero);
             window.scrollTo(0, 0);
           }}
         >
@@ -35,9 +33,11 @@ const Navbar = ({ isTopOfPage }) => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-blue-700 underline" : "text-secondary"
-              } hover:text-blue-out hover:underline text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
+                selectedPage === link.title ? "underline" : ""
+              } hover:text-blue-out text-secondary text-[18px] font-medium cursor-pointer`}
+              onClick={() => {
+                setSelectedPage(link.title)
+              }}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
@@ -58,10 +58,10 @@ const Navbar = ({ isTopOfPage }) => {
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? "text-blue-700 underline" : "text-secondary"} font-poppins flex font-medium cursor-pointer text-[22px] w-full`}
+                  className={`${selectedPage === link.title ? "text-blue-700 underline" : "text-secondary"} font-poppins flex font-medium cursor-pointer text-[22px] w-full`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(link.title);
+                    setSelectedPage(link.title);
                   }}
                 >
                   <a href={`#${link.id}`} className='w-full'>
@@ -71,6 +71,7 @@ const Navbar = ({ isTopOfPage }) => {
               ))}
             </ul>
           </div>
+
         </div>
 
       </div>

@@ -3,9 +3,10 @@ import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
-import { services } from '../constants';
+import { Pages, services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
-import { SectionWrapper } from '../hoc'
+import { SectionWrapper } from '../hoc';
+import { staggerContainer } from '../utils/motion';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -30,12 +31,25 @@ const ServiceCard = ({ index, title, icon }) => {
   )
 }
 
-const About = () => {
+const About = ({ setSelectedPage }) => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
+    <motion.section
+      onViewportEnter={() => setSelectedPage(Pages.About)}
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25}}
+      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+    >
+      <span className='hash-span' id='about'>
+          &nbsp;
+      </span>
+
+      <motion.div
+        variants={textVariant()}
+      >
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={ styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
@@ -50,8 +64,9 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+
+    </motion.section>
   )
 }
 
-export default SectionWrapper(About, "about")
+export default About

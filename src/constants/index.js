@@ -25,18 +25,25 @@ import {
   threejs,
 } from "../assets";
 
+export const Pages = {
+  Hero: 'Hero',
+  About: 'About',
+  Work: 'Work',
+  Contact: 'Contact'
+}
+
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: Pages.About,
   },
   {
     id: "work",
-    title: "Work",
+    title: Pages.Work,
   },
   {
     id: "contact",
-    title: "Contact",
+    title: Pages.Contact,
   },
 ];
 
