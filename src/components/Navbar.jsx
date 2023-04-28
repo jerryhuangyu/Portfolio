@@ -5,12 +5,14 @@ import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
 
-const Navbar = () => {
+const Navbar = ({ isTopOfPage }) => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
 
+  const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0' : 'bg-opacity-60 bg-primary backdrop-blur-md';
+
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary bg-opacity-60 backdrop-blur-md`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${narbarBgOpacity}`}>
       <div className="w-full flex justify-between items-center max-w-7x1 mx-auto 2xl:px-[120px]">
         <Link 
           to='/'
