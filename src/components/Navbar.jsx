@@ -5,10 +5,32 @@ import { styles } from '../styles';
 import { navLinks, Pages } from '../constants';
 import { logo, menu, close, darkmode, lightmode } from '../assets';
 
+const DarkModeSwitcher = ({ isLightMode, setIsLightMode }) => {
+  return (
+    <img
+      className='w-5 h-5 cursor-pointer rounded-full'
+      alt="mode"
+      onClick={() => {
+        setIsLightMode(!isLightMode);
+        if (isLightMode) {
+          // console.log("set to dark");
+          localStorage.theme = 'dark';
+          document.documentElement.classList.add("dark");
+        } else {
+          // console.log("set to light");
+          localStorage.theme = 'light';
+          document.documentElement.classList.remove("dark");
+        }
+      }}
+      src={isLightMode?lightmode:darkmode}
+    />
+  )
+}
+
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIsLightMode }) => {
   const [toggle, setToggle] = useState(false);
-
   const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0 dark:backdrop-blur-lg' : 'bg-opacity-60 dark:bg-opacity-0 bg-primary backdrop-blur-md';
+
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${narbarBgOpacity}`}>
       <div className="w-full flex justify-between items-center max-w-7x1 mx-auto 2xl:px-[120px]">
@@ -42,27 +64,16 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIs
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
-            <img
-              className='w-5 h-5 cursor-pointer rounded-full dark:bg-blue-out'
-              alt="mode"
-              onClick={() => {
-                setIsLightMode(!isLightMode);
-                if (isLightMode) {
-                  // console.log("set to dark");
-                  localStorage.theme = 'dark';
-                  document.documentElement.classList.add("dark");
-                } else {
-                  // console.log("set to light");
-                  localStorage.theme = 'light';
-                  document.documentElement.classList.remove("dark");
-                }
-              }}
-              src={isLightMode?lightmode:darkmode}
-            />
+          <DarkModeSwitcher setIsLightMode={setIsLightMode} isLightMode={isLightMode}/>
         </ul>
 
         {/* menu for sm screen */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
+
+          <div className='pr-5'>
+            <DarkModeSwitcher isLightMode={isLightMode} setIsLightMode={setIsLightMode}/>
+          </div>
+          
           <img 
             src={toggle ? close : menu} 
             alt="menu" 
