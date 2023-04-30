@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
 
         {/* introduction */}
-        <div className='z-10'>
+        <div className='z-30'>
           <HackerText />
           <p className={`${styles.heroSubText} mt-4`}>
             I'm a self-taught software engineer<br className='sm:block hidden' /> with experience in developing&nbsp;
@@ -33,10 +33,10 @@ const Hero = () => {
 
       </div>
 
-      <HeroModelCanvas className='z-0'/>
+      <HeroModelCanvas />
 
       {/* scrolling button */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-30">
         <a href="#about">
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div

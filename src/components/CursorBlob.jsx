@@ -6,7 +6,7 @@ const CursorBlob = () => {
   useEffect(() => {
     // set interval for update blob border shape
     setInterval(() => {
-      blob.current.style.borderRadius = `55% 61% 46% 59% / ${Math.floor(Math.random() * 90)}% ${Math.floor(Math.random() * 90)}% ${Math.floor(Math.random() * 90)}% ${Math.floor(Math.random() * 90)}%`;
+      blob.current.style.borderRadius = `55% 61% 46% 59% / ${Math.floor(Math.random() * 100)}% ${Math.floor(Math.random() * 100)}% ${Math.floor(Math.random() * 100)}% ${Math.floor(Math.random() * 100)}%`;
     }, 2000);
 
     // when mousemove update blob's position to mouse

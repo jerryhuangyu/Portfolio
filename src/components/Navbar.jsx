@@ -32,7 +32,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIs
   const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0 dark:backdrop-blur-lg' : 'bg-opacity-60 dark:bg-opacity-0 bg-primary backdrop-blur-md';
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${narbarBgOpacity}`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 ${narbarBgOpacity}`}>
       <div className="w-full flex justify-between items-center max-w-7x1 mx-auto 2xl:px-[120px]">
         <Link 
           to='/'
