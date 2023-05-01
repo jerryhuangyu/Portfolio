@@ -10,7 +10,7 @@ import { staggerContainer } from '../utils/motion';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full z-20">
+    <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full px-0.5 green-pink-gradient p-[1px] rounded-[20px] shadow-2xl"
@@ -39,7 +39,7 @@ const About = ({ setSelectedPage }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25}}
-      className={`${styles.padding} max-w-7xl mx-auto relative`}
+      className={`${styles.padding} max-w-7xl mx-auto relative z-30`}
     >
       <span className='hash-span' id='about'>
           &nbsp;

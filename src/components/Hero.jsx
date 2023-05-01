@@ -11,7 +11,7 @@ const Hero = () => {
       <div className={`${styles.paddingX} absolute inset-0 top-[190px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
 
         {/* lefthand side line decorator */}
-        <div className="flex flex-col justify-center items-center mt-5 z-10">
+        <div className="flex flex-col justify-center items-center mt-5 z-30">
           <div className='w-5 h-5 rounded-full bg-blue-out'/>
           <div className="w-1 sm:h-80 h-40 blue-gradient"></div>
         </div>
