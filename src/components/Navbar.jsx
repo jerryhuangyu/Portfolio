@@ -29,7 +29,7 @@ const DarkModeSwitcher = ({ isLightMode, setIsLightMode }) => {
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIsLightMode }) => {
   const [toggle, setToggle] = useState(false);
-  const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0 dark:backdrop-blur-lg' : 'bg-opacity-60 dark:bg-opacity-0 bg-primary backdrop-blur-md';
+  const narbarBgOpacity = isTopOfPage ? 'bg-opacity-0 dark:backdrop-blur-lg' : 'bg-opacity-60 dark:bg-dark-primary bg-primary backdrop-blur-md';
 
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 ${narbarBgOpacity}`}>
