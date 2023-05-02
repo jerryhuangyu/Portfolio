@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
 
         {/* introduction */}
-        <div className='z-30'>
+        <div className='z-30 p-2 backdrop-blur-[4px] rounded-xl w-[600px] dark:bg-opacity-[0.01]'>
           <HackerText />
           <p className={`${styles.heroSubText} mt-4`}>
             I'm a self-taught software engineer<br className='sm:block hidden' /> with experience in developing&nbsp;

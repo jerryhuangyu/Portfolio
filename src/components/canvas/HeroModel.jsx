@@ -21,8 +21,8 @@ const HeroModel = ({ isMobile }) => {
       />
       <primitive 
         object={model.scene}
-        scale={isMobile ? 0.38 : 0.75}
-        position={isMobile ? [0, -1.8, -0.45] : [0, -2.55, -1.5]}
+        scale={isMobile ? 0.38 : 0.65}
+        position={isMobile ? [0, -1.8, -0.45] : [0, -3.1, -0.2]}
         rotation={[-0.01, -3.05, -0.1]}
       />
     </mesh>
