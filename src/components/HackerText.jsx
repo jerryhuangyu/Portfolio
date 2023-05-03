@@ -1,5 +1,5 @@
-import { useEffect, useRef, useCallback } from 'react'
-import { styles } from '../styles';
+import { useEffect, useRef, useCallback } from "react";
+import { styles } from "../styles";
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
@@ -9,27 +9,27 @@ const HackerText = () => {
 
   const handleMouseOver = useCallback((e) => {
     let iteration = 0;
-    
+
     clearInterval(interval);
     interval = setInterval(() => {
       e.target.innerText = e.target.innerText
         .split("")
         .map((letter, index) => {
-          if(index < iteration) {
+          if (index < iteration) {
             return e.target.dataset.value[index];
           }
-        
-          return letters[Math.floor(Math.random() * letters.length)]
+
+          return letters[Math.floor(Math.random() * letters.length)];
         })
         .join("");
-      
-      if(iteration >= e.target.dataset.value.length){ 
+
+      if (iteration >= e.target.dataset.value.length) {
         clearInterval(interval);
       }
-      
+
       iteration += 1 / 5;
     }, 50);
-  }, [])
+  }, []);
 
   useEffect(() => {
     const node = hackerTextRef.current;
@@ -42,9 +42,12 @@ const HackerText = () => {
 
   return (
     <h1 className={`${styles.heroHeadText} text-secondary dark:text-white`}>
-      Hi, I'm <span ref={hackerTextRef} data-value='Jerry' className='text-blue-out'>Jerry</span>
+      Hi, I'm{" "}
+      <span ref={hackerTextRef} data-value="Jerry" className="text-blue-out">
+        Jerry
+      </span>
     </h1>
-  )
-}
+  );
+};
 
-export default HackerText
+export default HackerText;

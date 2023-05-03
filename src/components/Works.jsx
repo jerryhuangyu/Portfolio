@@ -1,23 +1,30 @@
-import Tilt from 'react-tilt';
-import { motion } from 'framer-motion';
+import Tilt from "react-tilt";
+import { motion } from "framer-motion";
 
-import { styles } from '../styles';
-import { github } from '../assets';
-import { SectionWrapper } from '../hoc';
-import { Pages, projects } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
-import { staggerContainer } from '../utils/motion';
+import { styles } from "../styles";
+import { github } from "../assets";
+import { SectionWrapper } from "../hoc";
+import { Pages, projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
+import { staggerContainer } from "../utils/motion";
 
-import React from 'react'
+import React from "react";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link}) => {
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+}) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{max: 13, scale: 1, speed: 450}}
+        options={{ max: 13, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className='relative w-full h-[230px]'>
+        <div className="relative w-full h-[230px]">
           <img
             src={image}
             alt={name}
@@ -29,21 +36,21 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img 
+              <img
                 src={github}
                 alt="github"
-                className='w-1/2 h-1/2 object-contain'
+                className="w-1/2 h-1/2 object-contain"
               />
             </div>
           </div>
         </div>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        <div className="mt-5">
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
@@ -52,8 +59,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
         </div>
       </Tilt>
     </motion.div>
-  )
-}
+  );
+};
 
 const Works = ({ setSelectedPage }) => {
   return (
@@ -62,11 +69,11 @@ const Works = ({ setSelectedPage }) => {
       variants={staggerContainer()}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25}}
+      viewport={{ once: true, amount: 0.25 }}
       className={`${styles.padding} max-w-7xl mx-auto relative z-30`}
     >
-      <span className='hash-span' id='work'>
-          &nbsp;
+      <span className="hash-span" id="work">
+        &nbsp;
       </span>
 
       <motion.div variants={textVariant()}>
@@ -89,15 +96,11 @@ const Works = ({ setSelectedPage }) => {
 
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard
-            key={`project-${index}`}
-            index={index}
-            {...project}
-          />
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
 export default Works;

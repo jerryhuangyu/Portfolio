@@ -20,9 +20,10 @@ const CursorBlob = () => {
         {
           left: `${pageX}px`,
           top: `${pageY}px`,
-        }, { 
+        },
+        {
           duration: 2000,
-          fill: 'forwards'
+          fill: "forwards",
         }
       );
     });
@@ -32,14 +33,14 @@ const CursorBlob = () => {
       // const { scrollY } = e;
       cursor_blob.animate(
         {
-          top: `${window.scrollY+360}px`,
-        }, { 
+          top: `${window.scrollY + 360}px`,
+        },
+        {
           duration: 7000,
-          fill: 'forwards'
+          fill: "forwards",
         }
       );
     });
-    
   });
 
   return (
@@ -47,13 +48,12 @@ const CursorBlob = () => {
       <div className="bg-black bg-opacity-[.15] blur-xl backdrop-blur-3xl fixed top-0 w-screen h-screen z-[20]"></div>
       <div
         ref={blob}
-        id='cursor_blob'
+        id="cursor_blob"
         className="absolute blob-bg-gradient w-[500px] aspect-square translate-x-[-50%] translate-y-[-50%] rounded-full duration-[2000ms] ease-linear z-[10]"
-        style={{ borderRadius: "49% 51% 70% 30% / 67% 68% 32% 33%"}}
-      >
-      </div>
+        style={{ borderRadius: "49% 51% 70% 30% / 67% 68% 32% 33%" }}
+      ></div>
     </>
-  )
-}
+  );
+};
 
-export default CursorBlob
+export default CursorBlob;
