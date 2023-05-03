@@ -42,7 +42,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage, isLightMode, setIs
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src={logo} alt="logo" className="w-7 h-7 object-contain" />
           <p className='text-blue-700 dark:text-blue-300 text-[18px] font-bold cursor-pointer flex px-2 font-["Noto_Sans_TC"]'>
             黃柏瑜 &nbsp;
             <span className='sm:block hidden'>| Jerry's Protfolio</span>
