@@ -78,7 +78,7 @@ const Contact = ({ setSelectedPage }) => {
       <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-blue-200 rounded-2xl p-10 md:p-[60px]"
+          className="flex-[0.75] bg-blue-200 dark:bg-gray-700 dark:bg-opacity-40 rounded-2xl p-10 md:p-[60px]"
         >
           <p className={styles.sectionSubText}>Get in touch</p>
           <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -97,7 +97,7 @@ const Contact = ({ setSelectedPage }) => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your name?"
-                className="bg-primary py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium"
+                className="bg-primary dark:bg-gray-600 py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -111,7 +111,7 @@ const Contact = ({ setSelectedPage }) => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your email?"
-                className="bg-primary py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium"
+                className="bg-primary dark:bg-gray-600 py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -124,17 +124,27 @@ const Contact = ({ setSelectedPage }) => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="What's do you want to say?"
-                className="bg-primary py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium"
+                className="bg-primary dark:bg-gray-600 py-4 px-6 placeholder:text-tertiary text-secondary rounded-lg outline-none border-none font-medium"
               />
             </label>
 
             <div className="flex justify-end">
-              <button
-                type="submit"
-                className="bg-blue-out py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-secondary rounded-xl"
-              >
-                {loading ? "Sending..." : "Send"}
-              </button>
+              <div className="relative group">
+                <div
+                  className="hidden dark:block absolute -inset-0.5 rounded-lg opacity-50 blur
+                  bg-gradient-to-r from-pink-600 to-purple-600
+                  group-hover:opacity-100 transition ease-in-out duration-1000 group-hover:duration-200"
+                ></div>
+                <button
+                  type="submit"
+                  className="group relative h-12 w-fit pr-6 pl-7 overflow-hidden rounded-lg bg-white dark:bg-gray-800 text-lg shadow"
+                >
+                  <div className="absolute inset-0 w-3 bg-blue-out dark:hidden transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                  <span class="relative text-black dark:text-white group-hover:text-white">
+                    {loading ? "Sending..." : "Send"}
+                  </span>
+                </button>
+              </div>
             </div>
           </form>
         </motion.div>
