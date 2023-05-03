@@ -1,13 +1,24 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, CursorBlob } from './components';
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Hero,
+  Navbar,
+  Tech,
+  Works,
+  StarsCanvas,
+  CursorBlob,
+} from "./components";
 import { useRef, useEffect, useState } from "react";
 import { Curve } from "three";
 import { Pages } from "./constants";
 
 const App = () => {
   const [isLightMode, setIsLightMode] = useState(
-    document.documentElement.classList.contains("dark")?false:true
+    document.documentElement.classList.contains("dark") ? false : true
   );
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const [selectedPage, setSelectedPage] = useState(Pages.Hero);
@@ -18,9 +29,9 @@ const App = () => {
     } else {
       setIsTopOfPage(false);
     }
-  }
+  };
 
-  useEffect (() => {
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.addEventListener("scroll", handleScroll);
   }, []);
@@ -52,7 +63,7 @@ const App = () => {
         </div>
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
