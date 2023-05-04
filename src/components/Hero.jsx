@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[190px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[190px] max-w-7xl mx-auto flex flex-row items-start md:gap-10 gap-4`}
       >
         {/* lefthand side line decorator */}
         <div className="flex flex-col justify-center items-center mt-5 z-30">
@@ -18,7 +18,7 @@ const Hero = () => {
         </div>
 
         {/* introduction */}
-        <div className="z-30 p-2 backdrop-blur-[4px] rounded-xl w-[600px] dark:bg-opacity-[0.01]">
+        <div className="z-30 backdrop-blur-[4px] rounded-xl w-[600px] dark:bg-opacity-[0.01]">
           <HackerText />
           <p className={`${styles.heroSubText} mt-4`}>
             I'm a self-taught software engineer
