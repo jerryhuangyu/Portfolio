@@ -4,8 +4,10 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+import menu from "./menu.png";
+import menudark from './menu_dark.png';
+import close from "./close.png";
+import closedark from "./close_dark.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -34,6 +36,10 @@ import lightmode from './lightmode.png';
 import darkmode from './darkmode.png';
 
 export {
+  menu,
+  menudark,
+  close,
+  closedark,
   darkmode,
   lightmode,
   logo,
@@ -42,8 +48,6 @@ export {
   mobile,
   web,
   github,
-  menu,
-  close,
   css,
   docker,
   figma,

@@ -31,6 +31,7 @@ module.exports = {
         "blue-out": '#62CDFF',
         // "blue-header": '#19A7CE',
         "dark-primary": '#1b1b1d',
+        "dark-primary-300": '#2b2b2d',
         "dark-secondary": '#f9f9f5',
       },
       boxShadow: {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks, Pages } from "../constants";
-import { logo, menu, close, darkmode, lightmode } from "../assets";
+import { logo, menu, menudark, close, closedark, darkmode, lightmode } from "../assets";
 
 const DarkModeSwitcher = ({ isLightMode, setIsLightMode }) => {
   return (
@@ -86,7 +86,7 @@ const Navbar = ({
 
         {/* menu for sm screen */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <div className="pr-5">
+          <div className="pr-3">
             <DarkModeSwitcher
               isLightMode={isLightMode}
               setIsLightMode={setIsLightMode}
@@ -94,18 +94,29 @@ const Navbar = ({
           </div>
 
           <img
-            src={toggle ? close : menu}
+            src={isLightMode ? menu : menudark}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-8 h-8 object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />
 
           <div
             className={`${
               !toggle ? "right-[-100%]" : "right-0"
-            } duration-300 ease-in-out bg-blue-100 px-16 py-6 fixed top-[76px] h-screen min-w-[70%]`}
+            } duration-300 ease-in-out bg-blue-200 dark:bg-dark-primary-300 px-16 pt-[23px]
+            fixed top-[0px] h-screen min-w-[60%]`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-6">
+            <dir className='relative'>
+              <img
+              src={isLightMode ? close : closedark}
+              alt="menuclose"
+              className="w-6 h-6 dark:scale-75 object-contain cursor-pointer
+              absolute right-[-36px]"
+              onClick={() => setToggle(!toggle)}
+              />
+            </dir>
+            <ul className="list-none flex justify-end items-start flex-1
+            flex-col gap-6 mt-10">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
