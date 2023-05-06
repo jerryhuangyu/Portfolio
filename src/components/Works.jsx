@@ -47,8 +47,11 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">
-            <a href={demo_link}>{name}</a>
+          <h3
+            onClick={() => window.open(demo_link, "_blank")}
+            className="text-white font-bold text-[24px] cursor-pointer"
+          >
+            {name}
           </h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
