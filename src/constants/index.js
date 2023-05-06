@@ -242,12 +242,20 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "tailwind",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "openai",
         color: "pink-text-gradient",
+      },
+      {
+        name: "express",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
       },
     ],
     image: tshortmaker,
@@ -260,16 +268,24 @@ const projects = [
       "CodeGPT is a website app that uses ChatGPT AI to generate code solutions for coding-related questions. Our AI understands the context of the problem and tailors solutions to the specific requirements of the question. Get fast and reliable coding help with CodeGPT.",
     tags: [
       {
-        name: "nextjs",
+        name: "js",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "html",
         color: "pink-text-gradient",
+      },
+      {
+        name: "openai",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
+        color: "green-text-gradient",
       },
     ],
     image: codegpt,
@@ -282,15 +298,15 @@ const projects = [
       "EVOGYM, a web demo frontend website offering unrivaled gym and fitness training services. Our world-class studios and expert trainers help you achieve your dream body shape. Experience unparalleled fitness classes and take your training to the next level with EVOGYM.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "tailwind",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "typescript",
         color: "pink-text-gradient",
       },
     ],
@@ -304,15 +320,15 @@ const projects = [
       "Data Analytics is a demo frontend website page that helps businesses increase revenue by leveraging real-time data analytics. Our platform provides fast and flexible financing options for BTB, BTC, and SaaS platforms, allowing businesses to scale with ease and gain a competitive edge. ",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "tailwind",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "javascript",
         color: "pink-text-gradient",
       },
     ],
