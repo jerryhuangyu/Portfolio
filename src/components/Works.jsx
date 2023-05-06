@@ -22,8 +22,8 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{ max: 9, scale: 1, speed: 450 }}
-        className="bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 dark:hover:bg-opacity-80 ease-out duration-200 p-5 rounded-2xl sm:w-[360px] w-full h-[550px] flex flex-col justify-between"
+        options={{ max: 13, scale: 1, speed: 450 }}
+        className='bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 dark:hover:bg-opacity-80 duration-200 p-5 sm:w-[360px] sm:h-[530px] rounded-2xl flex flex-col justify-between'
       >
         <div>
           <div className="relative w-full h-[230px]">
@@ -48,12 +48,12 @@ const ProjectCard = ({
           </div>
 
           <div className="mt-5">
-            <h3
+            <div
               onClick={() => window.open(demo_link, "_blank")}
               className="text-white font-bold text-[24px] cursor-pointer"
             >
               {name}
-            </h3>
+            </div>
             <p className="mt-2 text-secondary text-[14px]">{description}</p>
           </div>
         </div>
@@ -84,10 +84,12 @@ const Works = ({ setSelectedPage }) => {
         &nbsp;
       </span>
 
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My works</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
-      </motion.div>
+      <div>
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>My works</p>
+          <h2 className={styles.sectionHeadText}>Projects.</h2>
+        </motion.div>
+      </div>
 
       <div className="w-full flex">
         <motion.p
