@@ -19,10 +19,12 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  sinsight,
+  tshortmaker,
+  codegpt,
+  dataanalytics,
+  evogym,
 } from "../assets";
 
 export const Pages = {
@@ -205,30 +207,35 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "S-Insight",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Our web-based platform enables users to manage trading records and analyze strategies from anywhere. With tools for browsing, recording, and visualizing transactions, users can gain insights, identify patterns, and make informed decisions about their performance.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "tailwind",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "mysql",
         color: "pink-text-gradient",
       },
+      {
+        name: "express",
+        color: "blue-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: sinsight,
+    source_code_link: "https://github.com/jerryhuangyu/StockAnalyze/",
+    demo_link: "https://stock-analyze.vercel.app/",
   },
   {
-    name: "Job IT",
+    name: "Tshort Maker",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Tshirt Maker uses AI to generate logos from user text input. Our platform offers customization options such as color, pattern, and design to create a unique look. Preview and select your favorite designs in a user-friendly interface. Create your next t-shirt logo quickly and easily with Tshirt Maker.",
     tags: [
       {
         name: "react",
@@ -243,13 +250,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: tshortmaker,
+    source_code_link: "https://github.com/jerryhuangyu/Tshort_product_app/",
+    demo_link: "https://jerryhuangyu.github.io/Tshort_product_app/",
   },
   {
-    name: "Trip Guide",
+    name: "CodeGPT",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "CodeGPT is a website app that uses ChatGPT AI to generate code solutions for coding-related questions. Our AI understands the context of the problem and tailors solutions to the specific requirements of the question. Get fast and reliable coding help with CodeGPT.",
     tags: [
       {
         name: "nextjs",
@@ -264,8 +272,53 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: codegpt,
+    source_code_link: "https://github.com/jerryhuangyu/selfChatGPT/",
+    demo_link: "https://self-chatgpt-flame.vercel.app/",
+  },
+  {
+    name: "EVOGYM",
+    description:
+      "EVOGYM, a web demo frontend website offering unrivaled gym and fitness training services. Our world-class studios and expert trainers help you achieve your dream body shape. Experience unparalleled fitness classes and take your training to the next level with EVOGYM.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: evogym,
+    source_code_link: "https://github.com/jerryhuangyu/fitness_app/",
+    demo_link: "https://jernox.tk/",
+  },
+  {
+    name: "DATA ANALYTICS",
+    description:
+      "Data Analytics is a demo frontend website page that helps businesses increase revenue by leveraging real-time data analytics. Our platform provides fast and flexible financing options for BTB, BTC, and SaaS platforms, allowing businesses to scale with ease and gain a competitive edge. ",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dataanalytics,
+    source_code_link: "https://github.com/jerryhuangyu/data_finance_app",
+    demo_link: "https://jerryhuangyu.github.io/data_finance_app/",
   },
 ];
 

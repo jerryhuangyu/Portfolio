@@ -28,14 +28,21 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-
 import lightmode from './lightmode.png';
 import darkmode from './darkmode.png';
 
+import sinsight from './work/S-Insight.png';
+import tshortmaker from './work/TshortMaker.png';
+import codegpt from './work/CodeGPT.png';
+import dataanalytics from './work/DataAnalytics.png';
+import evogym from './work/evogym.png';
+
 export {
+  evogym,
+  dataanalytics,
+  codegpt,
+  tshortmaker,
+  sinsight,
   menu,
   menudark,
   close,
