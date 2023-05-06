@@ -22,38 +22,40 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{ max: 13, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        options={{ max: 9, scale: 1, speed: 450 }}
+        className="bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 dark:hover:bg-opacity-80 ease-out duration-200 p-5 rounded-2xl sm:w-[360px] w-full h-[550px] flex flex-col justify-between"
       >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
+        <div>
+          <div className="relative w-full h-[230px]">
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl"
+            />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="mt-5">
-          <h3
-            onClick={() => window.open(demo_link, "_blank")}
-            className="text-white font-bold text-[24px] cursor-pointer"
-          >
-            {name}
-          </h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <div className="mt-5">
+            <h3
+              onClick={() => window.open(demo_link, "_blank")}
+              className="text-white font-bold text-[24px] cursor-pointer"
+            >
+              {name}
+            </h3>
+            <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          </div>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
