@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[190px] max-w-7xl mx-auto flex flex-row items-start md:gap-10 gap-4`}
+        className={`${styles.paddingX} absolute inset-0 top-[160px] sm:top-[190px] max-w-7xl mx-auto flex flex-row items-start gap-4 md:gap-10`}
       >
         {/* lefthand side line decorator */}
         <div className="flex flex-col justify-center items-center mt-5 z-30">
@@ -38,7 +38,7 @@ const Hero = () => {
       <HeroModelCanvas />
 
       {/* scrolling button */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-30">
+      <div className="absolute sm:bottom-32 bottom-20 w-full flex justify-center items-center z-30">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
