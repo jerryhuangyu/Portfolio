@@ -250,12 +250,8 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "express",
-        color: "blue-text-gradient",
-      },
-      {
         name: "mongodb",
-        color: "green-text-gradient",
+        color: "blue-text-gradient",
       },
     ],
     image: tshortmaker,
