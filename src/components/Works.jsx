@@ -23,20 +23,20 @@ const ProjectCard = ({
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 13, scale: 1, speed: 450 }}
-        className='bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 dark:hover:bg-opacity-80 duration-200 p-3 sm:w-[360px] sm:h-[530px] rounded-2xl flex flex-col justify-between'
+        className="bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 dark:hover:bg-opacity-80 duration-200 w-full sm:w-[360px] sm:h-[530px] rounded-2xl flex flex-col justify-between"
       >
         <div>
-          <div className="relative w-full h-[230px]">
+          <div className="relative w-full h-[230px] p-5">
             <img
               src={image}
               alt={name}
               className="w-full h-full object-cover rounded-2xl"
             />
 
-            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+            <div className="absolute -inset-1 flex justify-end m-3 card-img_hover">
               <div
                 onClick={() => window.open(source_code_link, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer dark:border"
               >
                 <img
                   src={github}
@@ -47,7 +47,7 @@ const ProjectCard = ({
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="sm:mt-5 px-5">
             <div
               onClick={() => window.open(demo_link, "_blank")}
               className="text-white font-bold text-[24px] cursor-pointer"
@@ -58,7 +58,7 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-2 px-5 pb-5">
           {tags.map((tag) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
