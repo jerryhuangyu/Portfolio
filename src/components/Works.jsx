@@ -59,7 +59,7 @@ const ProjectCard = ({
               className="text-white z-50 font-bold text-[24px] cursor-pointer flex items-center gap-2"
             >
               {name}
-              <img src={click} alt="click" className="w-5 h-5"/>
+              <img src={click} alt="click" className="w-5 h-5" />
             </div>
 
             <div className="py-3 flex flex-wrap gap-2">
@@ -139,11 +139,10 @@ const Works = ({ setSelectedPage }) => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary dark:text-dark-secondary text-[17px] max-w-3x1 leading-[30px]"
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Following projects showcases my skills and experience. Each project is
+          briefly described with links to code repositories and live demos in
+          it. It reflects my ability to solve problems, work with different
+          technologies, and manage projects effectively.
         </motion.p>
       </div>
 
