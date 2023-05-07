@@ -2,8 +2,7 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
+import { github, click } from "../assets";
 import { Pages, projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { staggerContainer } from "../utils/motion";
@@ -20,19 +19,68 @@ const ProjectCard = ({
   demo_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="group [perspective:1000px]"
+    >
+      <div
         options={{ max: 13, scale: 1, speed: 450 }}
-        className="bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 dark:hover:bg-opacity-80 duration-200 w-full sm:w-[360px] sm:h-[530px] rounded-2xl flex flex-col justify-between"
+        className="relative p-5 flex flex-col justify-between w-full sm:w-[360px] sm:h-[380px] rounded-2xl
+        bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 duration-500
+        group-hover:[transform:rotateY(180deg)] [transform-style:preserve-3d]"
       >
+        {/* frontface */}
         <div>
-          <div className="relative w-full h-[230px] p-5">
-            <img
-              src={image}
-              alt={name}
-              className="w-full h-full object-cover rounded-2xl"
-            />
+          {/* project preview */}
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-[230px] object-cover rounded-2xl"
+          />
 
+          {/* github */}
+          <div className="absolute -inset-1 flex justify-end m-3 card-img_hover">
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer dark:border"
+            >
+              <img
+                src={github}
+                alt="github"
+                className="w-1/2 h-1/2 object-contain"
+              />
+            </div>
+          </div>
+
+          {/* title and tags */}
+          <div className="pt-4 sm:pt-5">
+            <div
+              onClick={() => window.open(demo_link, "_blank")}
+              className="text-white z-50 font-bold text-[24px] cursor-pointer flex items-center gap-2"
+            >
+              {name}
+              <img src={click} alt="click" className="w-5 h-5"/>
+            </div>
+
+            <div className="py-3 flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <p
+                  key={tag.name}
+                  className={`text-[12px] sm:text-[14px] ${tag.color}`}
+                >
+                  #{tag.name}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* backface */}
+        <div className="absolute inset-0 w-full h-full text-center rounded-2xl bg-black/90 text-slate-50 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+          <div className="flex w-full h-full px-10 items-center justify-center">
+            {/* description */}
+            <p className="text-secondary text-[14px]">{description}</p>
+            {/* github */}
             <div className="absolute -inset-1 flex justify-end m-3 card-img_hover">
               <div
                 onClick={() => window.open(source_code_link, "_blank")}
@@ -45,27 +93,22 @@ const ProjectCard = ({
                 />
               </div>
             </div>
-          </div>
-
-          <div className="sm:mt-5 px-5">
-            <div
-              onClick={() => window.open(demo_link, "_blank")}
-              className="text-white font-bold text-[24px] cursor-pointer"
-            >
-              {name}
+            {/* demo */}
+            <div className="absolute inset-x-11 -inset-y-1 flex justify-end m-3 card-img_hover">
+              <div
+                onClick={() => window.open(demo_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer dark:border"
+              >
+                <img
+                  src={click}
+                  alt="tap"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
             </div>
-            <p className="mt-2 text-secondary text-[14px]">{description}</p>
           </div>
         </div>
-
-        <div className="my-3 flex flex-wrap-reverse gap-2 px-5">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[10px] sm:text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };

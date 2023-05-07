@@ -37,7 +37,10 @@ import codegpt from './work/CodeGPT.png';
 import dataanalytics from './work/DataAnalytics.png';
 import evogym from './work/evogym.png';
 
+import click from './icons/click.png';
+
 export {
+  click,
   evogym,
   dataanalytics,
   codegpt,

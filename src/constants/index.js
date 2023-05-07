@@ -197,7 +197,7 @@ const projects = [
   {
     name: "S-Insight",
     description:
-      "Our web-based platform enables users to manage trading records and analyze strategies from anywhere. With tools for browsing, recording, and visualizing transactions, users can gain insights, identify patterns, and make informed decisions about their performance.",
+      "Our platform allows users to manage and analyze trading records remotely with browsing, recording, and visualization tools for better insights and informed decision-making.",
     tags: [
       {
         name: "react",
@@ -221,9 +221,9 @@ const projects = [
     demo_link: "https://stock-analyze.vercel.app/",
   },
   {
-    name: "Tshort Maker",
+    name: "Tshirt Maker",
     description:
-      "Tshirt Maker uses AI to generate logos from user text input. Our platform offers customization options such as color, pattern, and design to create a unique look. Preview and select your favorite designs in a user-friendly interface. Create your next t-shirt logo quickly and easily with Tshirt Maker.",
+      "Tshirt Maker's AI generates logos from your text and offers customization options. Choose from a user-friendly interface and create a your dream T-shirt.",
     tags: [
       {
         name: "react",
@@ -249,7 +249,7 @@ const projects = [
   {
     name: "CodeGPT",
     description:
-      "CodeGPT is a website app that uses ChatGPT AI to generate code solutions for coding-related questions. Our AI understands the context of the problem and tailors solutions to the specific requirements of the question. Get fast and reliable coding help with CodeGPT.",
+      "Our application uses OpenAI to quickly generate tailored code solutions for coding-related questions, providing reliable help.",
     tags: [
       {
         name: "js",
@@ -279,7 +279,7 @@ const projects = [
   {
     name: "EVOGYM",
     description:
-      "EVOGYM, a web demo frontend website offering unrivaled gym and fitness training services. Our world-class studios and expert trainers help you achieve your dream body shape. Experience unparalleled fitness classes and take your training to the next level with EVOGYM.",
+      "A demo frontend website. EVOGYM offers expert training and world-class studios to help achieve your dream body shape.",
     tags: [
       {
         name: "react",
@@ -301,7 +301,7 @@ const projects = [
   {
     name: "DATA ANALYTICS",
     description:
-      "Data Analytics is a demo frontend website page that helps businesses increase revenue by leveraging real-time data analytics. Our platform provides fast and flexible financing options for BTB, BTC, and SaaS platforms, allowing businesses to scale with ease and gain a competitive edge. ",
+      "A demo frontend website. Data Analytics boosts business revenue with real-time analytics and flexible financing options for easy scaling and competitive edge.",
     tags: [
       {
         name: "react",
