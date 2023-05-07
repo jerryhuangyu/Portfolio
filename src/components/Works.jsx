@@ -76,7 +76,7 @@ const ProjectCard = ({
         </div>
 
         {/* backface */}
-        <div className="absolute inset-0 w-full h-full text-center rounded-2xl bg-black/90 text-slate-50 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+        <div className="absolute inset-0 w-full h-full text-center rounded-2xl bg-black/90 text-slate-50 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
           <div className="flex w-full h-full px-10 items-center justify-center">
             {/* description */}
             <p className="text-secondary text-[14px]">{description}</p>
