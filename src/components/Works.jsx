@@ -30,7 +30,7 @@ const ProjectCard = ({
         group-hover:[transform:rotateY(180deg)] [transform-style:preserve-3d]"
       >
         {/* frontface */}
-        <div className="absolute w-full p-5">
+        <div className="absolute w-full p-5 [backface-visibility:hidden] ">
           {/* project preview */}
           <img
             src={image}
