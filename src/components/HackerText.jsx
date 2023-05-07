@@ -1,10 +1,12 @@
 import { useEffect, useRef, useCallback } from "react";
 import { styles } from "../styles";
+import { useTranslation } from "react-i18next";
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
 
 const HackerText = () => {
+  const [t] = useTranslation();
   const hackerTextRef = useRef(null);
 
   const handleMouseOver = useCallback((e) => {
@@ -42,7 +44,7 @@ const HackerText = () => {
 
   return (
     <h1 className={`${styles.heroHeadText} text-secondary dark:text-white`}>
-      Hi, I'm{" "}
+      {t("hero.header")}{" "}
       <span ref={hackerTextRef} data-value="Jerry" className="text-blue-out">
         Jerry
       </span>

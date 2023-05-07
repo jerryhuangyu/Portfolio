@@ -12,9 +12,10 @@ import {
   StarsCanvas,
   CursorBlob,
 } from "./components";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, Suspense } from "react";
 import { Curve } from "three";
 import { Pages } from "./constants";
+import i18next from "i18next";
 
 const App = () => {
   const [isLightMode, setIsLightMode] = useState(
@@ -37,32 +38,48 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary dark:bg-dark-primary overflow-hidden">
-        <div className="hidden dark:md:block">
-          <CursorBlob />
+    <Suspense fallback="loading">
+      <BrowserRouter>
+        <div className="relative z-0 bg-primary dark:bg-dark-primary overflow-hidden">
+          <div className="hidden dark:md:block">
+            <CursorBlob />
+          </div>
+          <div className="bg-[#dbe7f0] dark:bg-dark-primary dark:bg-none bg-gradient-to-tr from-[#dbe7f0] via-[#f0e8d4] to-[#f5efe6] bg-cover bg-no-repeat bg-center">
+            <Navbar
+              isTopOfPage={isTopOfPage}
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+              isLightMode={isLightMode}
+              setIsLightMode={setIsLightMode}
+            />
+            <Hero />
+          </div>
+          <About setSelectedPage={setSelectedPage} />
+          <Experience isLightMode={isLightMode} />
+          <Tech />
+          <Works setSelectedPage={setSelectedPage} />
+          <Feedbacks />
+          <div className="relative z-30">
+            <Contact setSelectedPage={setSelectedPage} />
+            <StarsCanvas />
+          </div>
         </div>
-        <div className="bg-[#dbe7f0] dark:bg-dark-primary dark:bg-none bg-gradient-to-tr from-[#dbe7f0] via-[#f0e8d4] to-[#f5efe6] bg-cover bg-no-repeat bg-center">
-          <Navbar
-            isTopOfPage={isTopOfPage}
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-            isLightMode={isLightMode}
-            setIsLightMode={setIsLightMode}
-          />
-          <Hero />
-        </div>
-        <About setSelectedPage={setSelectedPage} />
-        <Experience isLightMode={isLightMode} />
-        <Tech />
-        <Works setSelectedPage={setSelectedPage} />
-        <Feedbacks />
-        <div className="relative z-30">
-          <Contact setSelectedPage={setSelectedPage} />
-          <StarsCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
+
+        {/* test for multi lang btn */}
+        <button
+          onClick={() => i18next.changeLanguage("en")}
+          className="fixed z-90 bottom-20 right-10 bg-orange-300 w-10"
+        >
+          en
+        </button>
+        <button
+          onClick={() => i18next.changeLanguage("zh")}
+          className="fixed z-90 bottom-10 right-10 bg-orange-300 w-10"
+        >
+          zh
+        </button>
+      </BrowserRouter>
+    </Suspense>
   );
 };
 

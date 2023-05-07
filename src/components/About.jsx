@@ -1,6 +1,7 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
+import { Translation, useTranslation } from "react-i18next";
 
 import { styles } from "../styles";
 import { Pages, services } from "../constants";
@@ -34,6 +35,7 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = ({ setSelectedPage }) => {
+  const { t } = useTranslation();
   return (
     <motion.section
       onViewportEnter={() => setSelectedPage(Pages.About)}
@@ -56,12 +58,7 @@ const About = ({ setSelectedPage }) => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary dark:text-dark-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cupiditate,
-        dolorum, molestiae hic in, harum nihil deleniti asperiores aliquam
-        minima cumque illum corporis nam maiores quo illo consequatur quasi
-        pariatur provident totam repellat aliquid nisi sed cum. Atque quidem
-        quo, temporibus eum suscipit quis molestias autem. Quod eius deserunt
-        quis!
+        {t('about.intro')}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

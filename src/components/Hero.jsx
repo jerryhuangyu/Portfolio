@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import Typed from "react-typed";
+import { useTranslation } from "react-i18next";
 
 import { styles } from "../styles";
 import { HeroModelCanvas } from "./canvas";
 import { HackerText } from "./";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -21,9 +24,8 @@ const Hero = () => {
         <div className="z-30 backdrop-blur-[4px] rounded-xl w-[600px] dark:bg-opacity-[0.01]">
           <HackerText />
           <p className={`${styles.heroSubText} mt-4`}>
-            I'm a self-taught software engineer
-            <br className="sm:block hidden" /> with experience in
-            developing&nbsp;
+            {t("hero.intro1")}
+            <br className="sm:block hidden" /> {t("hero.intro2")}&nbsp;
             <Typed
               className="text-blue-800 dark:text-primary font-bold"
               strings={["Web.", "MR.", "ROS."]}

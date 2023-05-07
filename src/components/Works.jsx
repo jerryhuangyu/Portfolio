@@ -1,5 +1,6 @@
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import { styles } from "../styles";
 import { github, click } from "../assets";
@@ -18,6 +19,7 @@ const ProjectCard = ({
   source_code_link,
   demo_link,
 }) => {
+  const { t } = useTranslation();
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
@@ -79,7 +81,9 @@ const ProjectCard = ({
         <div className="absolute inset-0 w-full h-full text-center rounded-2xl bg-black/90 text-slate-50 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
           <div className="flex w-full h-full px-10 items-center justify-center">
             {/* description */}
-            <p className="text-secondary text-[14px]">{description}</p>
+            <p className="text-secondary text-[14px]">
+              {t(`work.cards.${index}`)}
+            </p>
             {/* github */}
             <div className="absolute -inset-1 flex justify-end m-3 card-img_hover">
               <div
@@ -114,6 +118,7 @@ const ProjectCard = ({
 };
 
 const Works = ({ setSelectedPage }) => {
+  const { t } = useTranslation();
   return (
     <motion.section
       onViewportEnter={() => setSelectedPage(Pages.Work)}
@@ -139,10 +144,7 @@ const Works = ({ setSelectedPage }) => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary dark:text-dark-secondary text-[17px] max-w-3x1 leading-[30px]"
         >
-          Following projects showcases my skills and experience. Each project is
-          briefly described with links to code repositories and live demos in
-          it. It reflects my ability to solve problems, work with different
-          technologies, and manage projects effectively.
+          {t("work.intro")}
         </motion.p>
       </div>
 
