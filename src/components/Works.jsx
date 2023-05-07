@@ -25,12 +25,12 @@ const ProjectCard = ({
     >
       <div
         options={{ max: 13, scale: 1, speed: 450 }}
-        className="relative p-5 flex flex-col justify-between w-full sm:w-[360px] sm:h-[380px] rounded-2xl
+        className="relative flex flex-col justify-between w-full sm:w-[360px] sm:h-[380px] rounded-2xl
         bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 duration-500
         group-hover:[transform:rotateY(180deg)] [transform-style:preserve-3d]"
       >
         {/* frontface */}
-        <div>
+        <div className="absolute w-full p-5">
           {/* project preview */}
           <img
             src={image}
