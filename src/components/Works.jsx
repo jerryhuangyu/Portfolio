@@ -27,8 +27,7 @@ const ProjectCard = ({
     >
       <div
         options={{ max: 13, scale: 1, speed: 450 }}
-        className="relative flex flex-col justify-between w-[80vw] h-[40vh] min-h-[380px] sm:w-[360px] sm:h-[380px] rounded-2xl bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 duration-500
-        group-hover:[transform:rotateY(180deg)] [transform-style:preserve-3d]"
+        className="relative flex flex-col justify-between w-[80vw] h-[40vh] min-h-[380px] sm:w-[360px] sm:h-[380px] rounded-2xl bg-tertiary dark:bg-gray-700 dark:bg-opacity-30 duration-500 group-hover:[transform:rotateY(180deg)] [transform-style:preserve-3d]"
       >
         {/* frontface */}
         <div className="absolute w-full p-5 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
@@ -77,7 +76,7 @@ const ProjectCard = ({
         </div>
 
         {/* backface */}
-        <div className="absolute inset-0 w-full h-full text-center rounded-2xl bg-black/90 text-slate-50 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+        <div className="absolute inset-0 w-full h-full text-center rounded-2xl bg-black text-slate-50 [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
           <div className="flex w-full h-full px-10 items-center justify-center">
             {/* description */}
             <p className="text-secondary text-[14px]">
