@@ -58,7 +58,16 @@ const About = ({ setSelectedPage }) => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary dark:text-dark-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        {t('about.intro')}
+        <p>{t("about.intro.p1")}</p>
+        <div>&nbsp;</div>
+        <ol>
+          <li className="list-disc list-inside">{t("about.intro.l1")}</li>
+          <li className="list-disc list-inside">{t("about.intro.l2")}</li>
+          <li className="list-disc list-inside">{t("about.intro.l3")}</li>
+          <li className="list-disc list-inside">{t("about.intro.l4")}</li>
+          <li className="list-disc list-inside">{t("about.intro.l5")}</li>
+          <li className="list-disc list-inside">{t("about.intro.l6")}</li>
+        </ol>
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
@@ -66,6 +75,9 @@ const About = ({ setSelectedPage }) => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+      <p className="mt-20">{t("about.intro.p2")}</p>
+      <div>&nbsp;</div>
+      <p>{t("about.intro.p3")}</p>
     </motion.section>
   );
 };

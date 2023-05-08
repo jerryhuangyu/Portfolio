@@ -23,7 +23,7 @@ i18n
     fallbackLng: 'en',
     whitelist: ['en', 'zh'],
     debug: true,
-    lng: 'en'
+    lng: 'zh'
 
     // interpolation: {
     //   escapeValue: false, // not needed for react as it escapes by default

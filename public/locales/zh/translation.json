@@ -5,7 +5,17 @@
     "intro2": "目前擁有開發經驗於"
   },
   "about": {
-    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cupiditate, dolorum, molestiae hic in, harum nihil deleniti asperiores aliquam minima cumque illum corporis nam maiores quo illo consequatur quasi pariatur provident totam repellat aliquid nisi sed cum. Atque quidem quo, temporibus eum suscipit quis molestias autem. Quod eius deserunt quis!"
+    "intro": {
+      "p1": "您好，目前是一位畢業於成功大學的碩士生，對程式開發充滿熱情，並且非常積極地學習各種程式語言和架構。我的經驗包括：",
+      "l1": "開發導覽 BIM 資訊模型的 VR 應用",
+      "l2": "驅動四軸麥克米輪的 Arduino 開發板",
+      "l3": "點雲後處理與解析程式",
+      "l4": "應用 ROS 框架開發自主導航移動平台",
+      "l5": "開發用於建立人機協作的 MR 交互介面",
+      "l6": "多個包含前後端的網頁應用，包括您正在瀏覽的個人介紹網站。",
+      "p2": "因為研究所有程式撰寫的需求，開始接觸程式開發，並產生濃厚的興趣。通過大量的自學和旁聽課程，不斷提高自身的技能。面對不同的程式語言和框架都很感興趣，並且能夠在有限的時間內學習新的技術並應用。在兩年的研究生涯，積極地參與實驗室的各種研究項目，並且負責設計和開發關鍵的模塊和系統。隨著時間的推移，累積了豐富的實踐經驗與開發技能。這些經驗讓我熟悉許多不同的開發環境和技術，並且學會了如何快速適應新的開發任務。",
+      "p3": "如果您正在尋找一位充滿熱情並且具有經驗的開發者，我相信我可以成為您的良好選擇。感謝您花時間閱讀，期待有機會能夠為您的專案貢獻我的開發技能。"
+    }
   },
   "work": {
     "intro": "以下項目展示了我的技能和經驗。每個項目皆附有代碼庫和網站鏈接，同時簡要地描述其功能與內容。這些主要呈現了我解決問題、使用不同技術和管理項目的能力。",
