@@ -41,7 +41,7 @@ const App = () => {
   return (
     <Suspense fallback="loading">
       <BrowserRouter>
-        <div className="relative z-0 bg-primary dark:bg-dark-primary overflow-hidden">
+        <div className="relative bg-primary dark:bg-dark-primary overflow-hidden">
           <div className="hidden dark:md:block">
             <CursorBlob />
           </div>
