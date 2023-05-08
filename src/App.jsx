@@ -11,6 +11,7 @@ import {
   Works,
   StarsCanvas,
   CursorBlob,
+  FabButton,
 } from "./components";
 import { useRef, useEffect, useState, Suspense } from "react";
 import { Curve } from "three";
@@ -64,20 +65,7 @@ const App = () => {
             <StarsCanvas />
           </div>
         </div>
-
-        {/* test for multi lang btn */}
-        <button
-          onClick={() => i18next.changeLanguage("en")}
-          className="fixed z-90 bottom-20 right-10 bg-orange-300 w-10"
-        >
-          en
-        </button>
-        <button
-          onClick={() => i18next.changeLanguage("zh")}
-          className="fixed z-90 bottom-10 right-10 bg-orange-300 w-10"
-        >
-          zh
-        </button>
+        <FabButton />
       </BrowserRouter>
     </Suspense>
   );

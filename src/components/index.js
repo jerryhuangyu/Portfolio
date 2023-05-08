@@ -9,6 +9,7 @@ import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import CursorBlob from './CursorBlob';
 import HackerText from './HackerText';
+import FabButton from './FabButton';
 
 export {
   Hero,
@@ -25,4 +26,5 @@ export {
   StarsCanvas,
   CursorBlob,
   HackerText,
+  FabButton,
 }
