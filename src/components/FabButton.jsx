@@ -18,6 +18,7 @@ const FabButton = () => {
   const [toggle, setToggle] = useState(false);
   const changeLangEn = () => i18next.changeLanguage("en");
   const changeLangZh = () => i18next.changeLanguage("zh");
+
   return (
     <div className=" items-center justify-center fixed bottom-[92px] right-10 text-gray-800 z-50">
       <div
@@ -32,14 +33,20 @@ const FabButton = () => {
       {/* list of function btn */}
       <SubFabButton
         icon={"en"}
-        handleOnclick={changeLangEn}
-        className={'translate-y-[-45px]'}
+        handleOnclick={() => {
+          changeLangEn();
+          setToggle(!toggle);
+        }}
+        className={"translate-y-[-45px]"}
         isToggle={toggle}
       />
       <SubFabButton
         icon={"zh"}
-        handleOnclick={changeLangZh}
-        className={'translate-y-[-90px]'}
+        handleOnclick={() => {
+          changeLangZh();
+          setToggle(!toggle);
+        }}
+        className={"translate-y-[-90px]"}
         isToggle={toggle}
       />
     </div>
