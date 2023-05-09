@@ -41,11 +41,11 @@ const App = () => {
   return (
     <Suspense fallback="loading">
       <BrowserRouter>
-        <div className="relative bg-primary dark:bg-dark-primary overflow-hidden">
+        <div className="relative overflow-hidden bg-primary dark:bg-dark-primary">
           <div className="hidden dark:md:block">
             <CursorBlob />
           </div>
-          <div className="bg-[#dbe7f0] dark:bg-dark-primary dark:bg-none bg-gradient-to-tr from-[#dbe7f0] via-[#f0e8d4] to-[#f5efe6] bg-cover bg-no-repeat bg-center">
+          <div className="bg-[#dbe7f0] bg-gradient-to-tr from-[#dbe7f0] via-[#f0e8d4] to-[#f5efe6] bg-cover bg-center bg-no-repeat dark:bg-dark-primary dark:bg-none">
             <Navbar
               isTopOfPage={isTopOfPage}
               selectedPage={selectedPage}

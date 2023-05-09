@@ -5,7 +5,7 @@ const SubFabButton = ({ icon, handleOnclick, className, isToggle }) => {
   return (
     <div
       onClick={handleOnclick}
-      className={`fixed cursor-pointer flex items-center justify-center z-40 bg-orange-200 rounded-full w-10 h-10 right-4 md:right-10 duration-500 bottom-4 md:bottom-10 ${
+      className={`fixed right-4 bottom-4 z-40 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-orange-200 duration-500 md:right-10 md:bottom-10 ${
         isToggle ? className : ""
       }`}
     >
@@ -20,10 +20,10 @@ const FabButton = () => {
   const changeLangZh = () => i18next.changeLanguage("zh");
 
   return (
-    <div className=" items-center justify-center fixed bottom-[92px] right-10 text-gray-800 z-50">
+    <div className="fixed bottom-[92px] right-10 z-50 items-center justify-center text-gray-800">
       <div
         onClick={() => setToggle(!toggle)}
-        className={`fixed bottom-4 right-4 md:bottom-10 md:right-10 flex items-center justify-center w-10 h-10 z-50 rounded-full bg-purple-200 cursor-pointer duration-500 ${
+        className={`fixed bottom-4 right-4 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-purple-200 duration-500 md:bottom-10 md:right-10 ${
           toggle ? "" : "rotate-[270deg]"
         }`}
       >
