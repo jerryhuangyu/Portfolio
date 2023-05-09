@@ -75,9 +75,11 @@ const About = ({ setSelectedPage }) => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-      <p className="mt-20">{t("about.intro.p2")}</p>
-      <div>&nbsp;</div>
-      <p>{t("about.intro.p3")}</p>
+      <div className="text-secondary dark:text-dark-secondary text-[17px] max-w-3xl leading-[30px]">
+        <p className="mt-20">{t("about.intro.p2")}</p>
+        <div>&nbsp;</div>
+        <p>{t("about.intro.p3")}</p>
+      </div>
     </motion.section>
   );
 };
