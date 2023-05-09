@@ -3,11 +3,6 @@ import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
-import menu from "./menu.png";
-import menudark from './menu_dark.png';
-import close from "./close.png";
-import closedark from "./close_dark.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -28,15 +23,19 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import lightmode from './lightmode.png';
-import darkmode from './darkmode.png';
-
 import sinsight from './work/S-Insight.png';
 import tshortmaker from './work/TshortMaker.png';
 import codegpt from './work/CodeGPT.png';
 import dataanalytics from './work/DataAnalytics.png';
 import evogym from './work/evogym.png';
 
+import github from "./icons/github.png";
+import close from "./icons/close.png";
+import closedark from "./icons/close_dark.png";
+import lightmode from './icons/lightmode.png';
+import darkmode from './icons/darkmode.png';
+import menu from "./icons/menu.png";
+import menudark from './icons/menu_dark.png';
 import click from './icons/click.png';
 
 export {
