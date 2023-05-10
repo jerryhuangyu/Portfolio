@@ -28,6 +28,7 @@ import tshortmaker from './work/TshortMaker.png';
 import codegpt from './work/CodeGPT.png';
 import dataanalytics from './work/DataAnalytics.png';
 import evogym from './work/evogym.png';
+import portfolio from './work/Portfolio.png';
 
 import github from "./icons/github.png";
 import close from "./icons/close.png";
@@ -39,6 +40,7 @@ import menudark from './icons/menu_dark.png';
 import click from './icons/click.png';
 
 export {
+  portfolio,
   click,
   evogym,
   dataanalytics,

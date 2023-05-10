@@ -25,6 +25,7 @@ import {
   codegpt,
   dataanalytics,
   evogym,
+  portfolio,
 } from "../assets";
 
 export const Pages = {
@@ -194,6 +195,32 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Jerry's Protfolio",
+    description:
+      "Our platform allows users to manage and analyze trading records remotely with browsing, recording, and visualization tools for better insights and informed decision-making.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "i18next",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/jerryhuangyu/StockAnalyze/",
+    demo_link: "https://stock-analyze.vercel.app/",
+  },
   {
     name: "S-Insight",
     description:

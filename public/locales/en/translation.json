@@ -20,11 +20,12 @@
   "work": {
     "intro": "Following projects showcases my skills and experience. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve problems, work with different technologies, and manage projects effectively.",
     "cards": {
-      "0": "Our platform allows users to manage and analyze trading records remotely with browsing, recording, and visualization tools for better insights and informed decision-making.",
-      "1": "Tshirt Maker's AI generates logos from your text and offers customization options. Choose from a user-friendly interface and create a your dream T-shirt.",
-      "2": "Our application uses OpenAI to quickly generate tailored code solutions for coding-related questions, providing reliable help.",
-      "3": "A demo frontend website. EVOGYM offers expert training and world-class studios to help achieve your dream body shape.",
-      "4": "A demo frontend website. Data Analytics boosts business revenue with real-time analytics and flexible financing options for easy scaling and competitive edge."
+      "0": "A static personal website that allows users to browse a personal profile.",
+      "1": "Our platform allows users to manage and analyze trading records remotely with browsing, recording, and visualization tools for better insights and informed decision-making.",
+      "2": "Tshirt Maker's AI generates logos from your text and offers customization options. Choose from a user-friendly interface and create a your dream T-shirt.",
+      "3": "Our application uses OpenAI to quickly generate tailored code solutions for coding-related questions, providing reliable help.",
+      "4": "A demo frontend website. EVOGYM offers expert training and world-class studios to help achieve your dream body shape.",
+      "5": "A demo frontend website. Data Analytics boosts business revenue with real-time analytics and flexible financing options for easy scaling and competitive edge."
     }
   },
   "test": "testing message"
