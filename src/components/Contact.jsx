@@ -11,7 +11,7 @@ import { Pages } from "../constants";
 
 const InputField = ({ type, name, value, handleChange, placeholderText }) => (
   <div className="mt-2">
-    <div className="relative w-full min-w-[200px]">
+    <div className="relative w-full">
       <input
         required
         type={type}
@@ -30,7 +30,7 @@ const InputField = ({ type, name, value, handleChange, placeholderText }) => (
 
 const InputTextarea = ({ name, value, handleChange, placeholderText }) => (
   <div className="mt-2">
-    <div className="relative w-full min-w-[200px]">
+    <div className="relative w-full">
       <textarea
         name={name}
         value={value}
@@ -148,9 +148,7 @@ const Contact = ({ setSelectedPage }) => {
             <div className="flex justify-end">
               <div className="group relative">
                 <div
-                  className="absolute -inset-0.5 hidden rounded-lg bg-gradient-to-r from-pink-600 to-purple-600
-                  opacity-50 blur transition
-                  duration-1000 ease-in-out group-hover:opacity-100 group-hover:duration-200 dark:block"
+                  className="absolute -inset-0.5 hidden rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 ease-in-out group-hover:opacity-100 group-hover:duration-200 dark:block"
                 ></div>
                 <button
                   type="submit"
