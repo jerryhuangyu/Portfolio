@@ -7,12 +7,12 @@
   "about": {
     "intro": {
       "p1": "Hello, I am currently a master's student who graduated from National Cheng Kung University. I am passionate about programming and very eager to learn various programming languages and frameworks. My experience includes:",
-      "l1": "VR applications for navigating BIM models.",
-      "l2": "Arduino board for driving a four-wheel omnidirectional wheel.",
-      "l3": "Point cloud analysis program.",
-      "l4": "AMR using the ROS framework.",
-      "l5": "MR interface for human-robot collaboration.",
-      "l6": "Multiple web applications that include frontend and backend technologies, including the personal profile website that you are currently browsing.",
+      "l1": "Full-stack web, including my portfolio you are currently browsing.",
+      "l2": "VR application for navigating BIM models.",
+      "l3": "MR application for human-robot collaboration interface.",
+      "l4": "Arduino, driver and controller for a four mecanum wheel system.",
+      "l5": "Robot, autonomous navigation platform using ROS framework.",
+      "l6": "Analysis software, point cloud processing program.",
       "p2": "I developed a passion for programming during my research, and improved my skills through self-learning and coursework. I enjoy exploring different languages and frameworks, and have experience adapting quickly to new tasks. During my graduate studies, I actively participated in multiple research projects and gained practical experience in development.",
       "p3": "If you are looking for an experienced and passionate developer, I believe I could be a great fit for you. Thank you for taking the time to read this, and I look forward to the opportunity to contribute my development skills to your project."
     }
