@@ -1,8 +1,11 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  grid,
+  hexagon,
+  octahedron,
+  overlapping,
+  torus,
+  triangle,
+
   javascript,
   typescript,
   html,
@@ -52,20 +55,28 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Web Application",
+    icon: grid,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "VR Application",
+    icon: hexagon,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "MR Application",
+    icon: octahedron,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Arduino Project",
+    icon: overlapping,
+  },
+  {
+    title: "Autonomous Mobile Robot",
+    icon: torus,
+  },
+  {
+    title: "Point Cloud Analyzation",
+    icon: triangle,
   },
 ];
 

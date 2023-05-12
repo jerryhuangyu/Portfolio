@@ -4,6 +4,13 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 
+import grid from './about/grid.png';
+import hexagon from './about/hexagon.png';
+import octahedron from './about/octahedron.png';
+import overlapping from './about/overlapping.png';
+import torus from './about/torus.png';
+import triangle from './about/triangle.png';
+
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -40,6 +47,13 @@ import menudark from './icons/menu_dark.png';
 import click from './icons/click.png';
 
 export {
+  grid,
+  hexagon,
+  octahedron,
+  overlapping,
+  torus,
+  triangle,
+
   portfolio,
   click,
   evogym,
