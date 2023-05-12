@@ -207,7 +207,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Jerry's Protfolio",
+    name: "My Protfolio",
     description:
       "Our platform allows users to manage and analyze trading records remotely with browsing, recording, and visualization tools for better insights and informed decision-making.",
     tags: [
