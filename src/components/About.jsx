@@ -11,10 +11,10 @@ import { staggerContainer } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="w-full xs:w-[250px]">
+    <Tilt className="w-[155px]">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="green-pink-gradient w-full rounded-[20px] p-[1px] px-0.5 shadow-2xl"
+        className="green-pink-gradient min-h-[180px] w-full rounded-[20px] p-[1px] px-0.5 shadow-2xl"
       >
         <div
           options={{
@@ -22,9 +22,9 @@ const ServiceCard = ({ index, title, icon }) => {
             scale: 1,
             speed: 450,
           }}
-          className="flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-tertiary py-5 px-12 dark:bg-dark-primary dark:bg-opacity-[90%]"
+          className="flex h-[180px] flex-col items-center justify-evenly gap-3 rounded-[20px] bg-tertiary py-5 px-12 dark:bg-dark-primary dark:bg-opacity-[90%]"
         >
-          <img src={icon} alt={title} className="h-16 w-16 object-contain" />
+          <img src={icon} alt={title} className="h-14 w-14 object-contain" />
           <h3 className="text-center text-[20px] font-bold text-white">
             {title}
           </h3>
@@ -59,7 +59,11 @@ const About = ({ setSelectedPage }) => {
         className="mt-4 max-w-3xl text-[17px] leading-[30px] text-secondary dark:text-dark-secondary"
       >
         <p>{t("about.intro.p1")}</p>
-        <div>&nbsp;</div>
+        <div className="my-16 flex flex-wrap gap-3 sm:gap-10">
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+        </div>
         <ol>
           <li className="list-inside list-disc">{t("about.intro.l1")}</li>
           <li className="list-inside list-disc">{t("about.intro.l2")}</li>
@@ -70,14 +74,8 @@ const About = ({ setSelectedPage }) => {
         </ol>
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
       <div className="max-w-3xl text-[17px] leading-[30px] text-secondary dark:text-dark-secondary">
-        <p className="mt-20">{t("about.intro.p2")}</p>
-        <div>&nbsp;</div>
+        <p className="my-12">{t("about.intro.p2")}</p>
         <p>{t("about.intro.p3")}</p>
       </div>
     </motion.section>
