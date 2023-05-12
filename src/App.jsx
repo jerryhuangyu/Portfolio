@@ -56,10 +56,10 @@ const App = () => {
             <Hero />
           </div>
           <About setSelectedPage={setSelectedPage} />
-          <Experience isLightMode={isLightMode} />
+          {/* <Experience isLightMode={isLightMode} /> */}
           <Tech />
           <Works setSelectedPage={setSelectedPage} />
-          <Feedbacks />
+          {/* <Feedbacks /> */}
           <div className="relative z-30">
             <Contact setSelectedPage={setSelectedPage} />
             <StarsCanvas />
