@@ -229,7 +229,7 @@ const projects = [
       },
     ],
     image: portfolio,
-    source_code_link: "https://github.com/jerryhuangyu/StockAnalyze/",
+    source_code_link: "https://github.com/jerryhuangyu/portfolio",
     demo_link: "https://stock-analyze.vercel.app/",
   },
   {
