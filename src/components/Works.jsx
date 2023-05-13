@@ -121,7 +121,7 @@ const Works = ({ setSelectedPage }) => {
     <motion.section
       onViewportEnter={() => setSelectedPage(Pages.Work)}
       variants={staggerContainer()}
-      initial="hidden"
+      initial="show" // due to sm device will disappear, disable enter motion
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       className={`${styles.padding} relative z-40 mx-auto max-w-7xl`}
