@@ -229,8 +229,8 @@ const projects = [
       },
     ],
     image: portfolio,
-    source_code_link: "https://github.com/jerryhuangyu/portfolio",
-    demo_link: "https://stock-analyze.vercel.app/",
+    source_code_link: "https://github.com/jerryhuangyu/Portfolio",
+    demo_link: "https://portfolio-peach-one-10.vercel.app/",
   },
   {
     name: "S-Insight",
@@ -281,8 +281,8 @@ const projects = [
       },
     ],
     image: tshortmaker,
-    source_code_link: "https://github.com/jerryhuangyu/Tshort_product_app/",
-    demo_link: "https://jerryhuangyu.github.io/Tshort_product_app/",
+    source_code_link: "https://github.com/jerryhuangyu/TShirtCustomApp",
+    demo_link: "https://jerryhuangyu.github.io/TShirtCustomApp/",
   },
   {
     name: "CodeGPT",
@@ -311,7 +311,7 @@ const projects = [
       },
     ],
     image: codegpt,
-    source_code_link: "https://github.com/jerryhuangyu/selfChatGPT/",
+    source_code_link: "https://github.com/jerryhuangyu/SelfChatGPT/",
     demo_link: "https://self-chatgpt-flame.vercel.app/",
   },
   {
@@ -333,7 +333,7 @@ const projects = [
       },
     ],
     image: evogym,
-    source_code_link: "https://github.com/jerryhuangyu/fitness_app/",
+    source_code_link: "https://github.com/jerryhuangyu/FitnessWebPage",
     demo_link: "https://jernox.tk/",
   },
   {
@@ -355,8 +355,8 @@ const projects = [
       },
     ],
     image: dataanalytics,
-    source_code_link: "https://github.com/jerryhuangyu/data_finance_app",
-    demo_link: "https://jerryhuangyu.github.io/data_finance_app/",
+    source_code_link: "https://github.com/jerryhuangyu/DataFinanceWebPage",
+    demo_link: "https://jerryhuangyu.github.io/DataFinanceWebPage/",
   },
 ];
 
