@@ -41,7 +41,7 @@ const FabButton = () => {
         isToggle={toggle}
       />
       <SubFabButton
-        icon={"zh"}
+        icon={"繁"}
         handleOnclick={() => {
           changeLangZh();
           setToggle(!toggle);
