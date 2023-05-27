@@ -27,7 +27,7 @@ const ProjectCard = ({
     >
       <div
         options={{ max: 13, scale: 1, speed: 450 }}
-        className="relative flex h-[40vh] max-h-[400px] min-h-[380px] w-[80vw] flex-col justify-between duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] sm:h-[380px] sm:w-[360px]"
+        className="relative flex h-[40vh] max-h-[400px] min-h-[380px] w-full flex-col justify-between duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] sm:h-[380px] sm:w-[360px]"
       >
         {/* frontface */}
         <div className="absolute z-40 h-full w-full rounded-2xl bg-tertiary p-5 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] dark:bg-gray-700">
@@ -146,7 +146,7 @@ const Works = ({ setSelectedPage }) => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 grid grid-cols-1 sm:flex sm:flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
