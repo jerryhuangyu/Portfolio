@@ -54,7 +54,7 @@ const About = ({ setSelectedPage }) => {
         <h2 className={styles.sectionHeadText}>About Me.</h2>
       </motion.div>
 
-      <motion.p
+      <motion.div
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 max-w-3xl text-[17px] leading-[30px] text-secondary dark:text-dark-secondary"
       >
@@ -72,7 +72,7 @@ const About = ({ setSelectedPage }) => {
           <li className="list-inside list-disc">{t("about.intro.l5")}</li>
           <li className="list-inside list-disc">{t("about.intro.l6")}</li>
         </ol>
-      </motion.p>
+      </motion.div>
 
       <div className="max-w-3xl text-[17px] leading-[30px] text-secondary dark:text-dark-secondary">
         <p className="my-12">{t("about.intro.p2")}</p>
