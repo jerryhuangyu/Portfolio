@@ -11,7 +11,7 @@ import { staggerContainer } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="w-[155px]">
+    <Tilt className="sm:w-[155px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="green-pink-gradient min-h-[180px] w-full rounded-[20px] p-[1px] px-0.5 shadow-2xl"
@@ -59,7 +59,7 @@ const About = ({ setSelectedPage }) => {
         className="mt-4 max-w-3xl text-[17px] leading-[30px] text-secondary dark:text-dark-secondary"
       >
         <p>{t("about.intro.p1")}</p>
-        <div className="my-16 flex flex-wrap gap-3 sm:gap-10">
+        <div className="my-16 sm:flex sm:flex-wrap grid grid-cols-2 gap-3 sm:gap-10">
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />
           ))}
