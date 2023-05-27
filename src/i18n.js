@@ -22,7 +22,7 @@ i18n
   .init({
     fallbackLng: 'en',
     whitelist: ['en', 'zh'],
-    debug: true,
+    debug: false,
     lng: 'zh'
 
     // interpolation: {
