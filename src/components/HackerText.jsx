@@ -45,6 +45,7 @@ const HackerText = () => {
   return (
     <h1 className={`${styles.heroHeadText} text-secondary dark:text-white`}>
       {t("hero.header")}{" "}
+      <br className="xs:hidden"/>
       <span ref={hackerTextRef} data-value="Jerry" className="text-blue-out">
         Jerry
       </span>

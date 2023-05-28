@@ -25,7 +25,7 @@ const Hero = () => {
           <HackerText />
           <p className={`${styles.heroSubText} mt-4`}>
             {t("hero.intro1")}
-            <br className="hidden sm:block" />
+            <br />
             {t("hero.intro2")}&nbsp;
             <Typed
               className="font-bold text-blue-800 dark:text-primary"
