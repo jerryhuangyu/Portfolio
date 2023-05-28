@@ -42,7 +42,7 @@ const Hero = () => {
 
       {/* scrolling button */}
       <div className="absolute bottom-20 z-30 flex w-full items-center justify-center sm:bottom-32">
-        <a href="#about">
+        <a href="#about" aria-label="Read more">
           <div className="flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-secondary p-2">
             <motion.div
               animate={{
