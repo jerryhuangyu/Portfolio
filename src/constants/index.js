@@ -6,23 +6,22 @@ import {
   torus,
   triangle,
 
-  javascript,
-  typescript,
-  html,
   css,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
   reactjs,
   redux,
   tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
+  typescript,
+  threejs,
+
   meta,
   starbucks,
   tesla,
   shopify,
-  threejs,
   sinsight,
   tshortmaker,
   codegpt,
@@ -121,6 +120,10 @@ const technologies = [
     name: "git",
     icon: git,
   },
+  {
+    name: "redux",
+    icon: redux,
+  }
 ];
 
 const experiences = [

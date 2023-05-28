@@ -1,4 +1,4 @@
-import logo from "./lion.png";
+import logo from "./lion.webp";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -11,31 +11,31 @@ import overlapping from './about/overlapping.png';
 import torus from './about/torus.png';
 import triangle from './about/triangle.png';
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+// Tech
+import css from "./tech/css.webp";
+import git from "./tech/git.webp";
+import html from "./tech/html.webp";
+import javascript from "./tech/javascript.webp";
+import mongodb from "./tech/mongodb.webp";
+import nodejs from "./tech/nodejs.webp";
+import reactjs from "./tech/reactjs.webp";
+import redux from "./tech/redux.webp";
+import tailwind from "./tech/tailwindcss.webp";
+import typescript from "./tech/typescript.webp";
+import threejs from "./tech/threejs.webp";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import sinsight from './work/S-Insight.png';
-import tshortmaker from './work/TshortMaker.png';
-import codegpt from './work/CodeGPT.png';
-import dataanalytics from './work/DataAnalytics.png';
-import evogym from './work/evogym.png';
-import portfolio from './work/Portfolio.png';
+// Work
+import sinsight from './work/S-Insight.webp';
+import tshortmaker from './work/TshortMaker.webp';
+import codegpt from './work/CodeGPT.webp';
+import dataanalytics from './work/DataAnalytics.webp';
+import evogym from './work/Evogym.webp';
+import portfolio from './work/Portfolio.webp';
 
 import github from "./icons/github.png";
 import close from "./icons/close.png";
@@ -73,9 +73,8 @@ export {
   mobile,
   web,
   github,
+
   css,
-  docker,
-  figma,
   git,
   html,
   javascript,
@@ -86,6 +85,7 @@ export {
   tailwind,
   typescript,
   threejs,
+
   meta,
   shopify,
   starbucks,
